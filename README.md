@@ -1,4 +1,4 @@
-This project is a clone of the Amazon website based on Next.js (React) and Firebase.  This project based on the wonderful tutorial by Clever Programmer @ YouTube (https://www.youtube.com/watch?v=RDV3Z1KCBvo) with CSS/routing/adaptation to the Next.js framework by me.
+This project is a clone of the Amazon website based on Next.js (React) and Firebase.  This project based on the wonderful tutorial by Clever Programmer @ YouTube (https://www.youtube.com/watch?v=RDV3Z1KCBvo) with CSS/routing/adaptation to the Next.js framework by me.  Special features include fully functional payment processing and React state/props.
 
 ## Updates ✨
 
