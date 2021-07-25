@@ -3,6 +3,7 @@
     width: 100vw;
     display: flex;
     align-items: center;
+    flex-direction: row;
     background-color: #131921;
     position: sticky;
     top: 0;
@@ -13,5 +14,40 @@
     width: 100px;
     object-fit: contain;
     margin: 0 20px;
+    margin-top: 18px;
+}
 
+.headersearch {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.headersearchicon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+}
+
+.headeroption {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.headeroptionone {
+    font-size: 10px;
+}
+
+.headeroptiontwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.headernav {
+    display: flex;
+    justify-content: space-evenly;
 }

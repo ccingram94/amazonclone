@@ -1,4 +1,4 @@
-This project is a clone of the Amazon website based on Next.js (React) and Firebase.
+This project is a clone of the Amazon website based on Next.js (React) and Firebase based on the wonderful tutorial by Clever Programmer @ YouTube
 
 ## Updates ✨
 
