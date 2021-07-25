@@ -2,6 +2,7 @@ import styles from '../styles/header.module.css'
 import headerlogo from '../public/amazontransparent.png'
 import Image from 'next/image'
 import SearchIcon from '@material-ui/icons/Search'
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 
 export default function Header() {
     return (
@@ -19,6 +20,10 @@ export default function Header() {
                 <div className={styles.headeroption}>
                     <span className={styles.headeroptionone}>Returns</span>
                     <span className={styles.headeroptiontwo}>Orders</span>
+                </div>
+                <div className={styles.headeroptionbasket}>
+                    <ShoppingBasketIcon></ShoppingBasketIcon>
+                    <span className={styles.headeroptiontwo} className={styles.headerbasketcount}>0</span>
                 </div>
             </div>
         </div>

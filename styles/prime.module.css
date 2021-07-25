@@ -1,0 +1,25 @@
+
+
+.homeimage {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    margin: 0;
+}
+
+.homerow {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.primecontainer {
+    top: 0;
+    margin: 0;
+}
+
+.prime {
+    top: 0;
+    margin: 0;
+}
