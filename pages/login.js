@@ -9,6 +9,7 @@ export default function Login() {
   return (
     <div className={styles.container}>
         <Image></Image>
+        <Login></Login>
     </div>
   )
 }

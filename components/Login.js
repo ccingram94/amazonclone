@@ -6,18 +6,36 @@ import Header from '../components/Header'
 import Prime from '../components/Prime'
 import Product from '../components/Product'
 import logo from '../public/amazontransparent.png'
+import { auth } from '../firebase'
 
 export default function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const signIn = e => {
         e.preventDefault();
+
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(auth => {
+                history.push("/")
+            })
+            .catch(error => alert(error.message))
         //firebase login here
     }
 
     const register = e => {
         e.preventDefault();
+
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(auth => {
+                if (auth) {
+                    history.push("/")
+                }
+            })
+            .catch(error => alert(error.message))
         //firebase registration here
     }
 
