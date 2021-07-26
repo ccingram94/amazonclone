@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Prime from '../components/Prime'
 import Product from '../components/Product'
+import Login from '../components/Login'
 
 export default function Home() {
   return (
