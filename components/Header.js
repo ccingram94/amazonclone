@@ -1,13 +1,19 @@
 import styles from '../styles/header.module.css'
 import headerlogo from '../public/amazontransparent.png'
 import Image from 'next/image'
+import Link from 'next/link'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
+import { useStateValue } from '../StateProvider'
 
 export default function Header() {
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className={styles.header}>
-            <Image className={styles.headerlogo} src={headerlogo} height="40px" width="70px"/>
+            <Link href="/">
+                <Image className={styles.headerlogo} src={headerlogo} height="40px" width="70px"/>
+            </Link>
             <div className={styles.headersearch} type="text">
                 <input className={styles.headersearchinput} type="text"></input>
                 <SearchIcon className={styles.headersearchicon}></SearchIcon>
@@ -22,8 +28,10 @@ export default function Header() {
                     <span className={styles.headeroptiontwo}>Orders</span>
                 </div>
                 <div className={styles.headeroptionbasket}>
-                    <ShoppingBasketIcon></ShoppingBasketIcon>
-                    <span className={styles.headeroptiontwo} className={styles.headerbasketcount}>0</span>
+                    <Link href="/checkout">
+                        <ShoppingBasketIcon></ShoppingBasketIcon>
+                    </Link>
+                    <span className={styles.headeroptiontwo} className={styles.headerbasketcount}>{basket?.length}</span>
                 </div>
             </div>
         </div>
