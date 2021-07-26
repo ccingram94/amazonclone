@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import router, { useRouter } from 'next/router'
 import styles from '../styles/login.module.css'
 import Header from '../components/Header'
 import Prime from '../components/Prime'
@@ -12,6 +13,7 @@ export default function Login() {
     const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const router = useRouter()
 
     const signIn = e => {
         e.preventDefault();
@@ -19,7 +21,7 @@ export default function Login() {
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
-                history.push("/")
+                router.push("/")
             })
             .catch(error => alert(error.message))
         //firebase login here
@@ -32,7 +34,7 @@ export default function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then(auth => {
                 if (auth) {
-                    history.push("/")
+                    router.push("/")
                 }
             })
             .catch(error => alert(error.message))

@@ -13,5 +13,7 @@ This project is a clone of the Amazon website based on Next.js (React) and Fireb
 ## Updates ✨
 
 7/24/21 -- Initialized repository, Next.js base template
+
 7/25/21 -- Base routing, modular CSS, main components
+
 7/26/21 -- Added firebase authentication

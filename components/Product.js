@@ -3,7 +3,7 @@ import Image from 'next/image'
 import initialState from '../reducer'
 import { useStateValue } from '../StateProvider'
 
-export default function Product ({title, image, price, rating}) {
+export default function Product ({ id, title, image, price, rating }) {
     const [{ basket}, dispatch] = useStateValue();
 
     const addToBasket = () => {
@@ -11,11 +11,12 @@ export default function Product ({title, image, price, rating}) {
         dispatch({
             type: "ADD_TO_BASKET",
             item: {
+                id: id,
                 title: title,
                 image: image,
                 price: price,
                 rating: rating,
-            }
+            },
         });
 
     };

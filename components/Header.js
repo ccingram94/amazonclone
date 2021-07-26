@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import { useStateValue } from '../StateProvider'
 import reducer, { initialState } from '../reducer'
+import { auth } from '../firebase'
 
 export default function Header() {
 
@@ -30,7 +31,7 @@ export default function Header() {
                 <Link href={!user && '/login'}>
                     <div onClick={handleAuthentication} className={styles.headeroption}>
                         <span className={styles.headeroptionlineone}>Hello {!user ? 'Guest' : user.email}</span>
-                        <span classname={styles.headeroptionlinetwo}>{user ? 'Sign Out' : 'Sign In'}</span>
+                        <span className={styles.headeroptionlinetwo}>{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
                 <Link href="orders">
